@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_headers",
+  "info": {
+    "displayName": "Header",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "classname": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

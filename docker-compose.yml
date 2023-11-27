@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      network: host
+    environment:
+      DATABASE_CLIENT: sqlite
+      DATABASE_NAME: /backend/database/db.sqlite
+      NODE_ENV: development # or production
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - sqlite_data:/app/database # Volume for SQLite database
+    ports:
+      - "1337:1337"
+
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+
+volumes:
+  sqlite_data: # This volume stores the SQLite database file
