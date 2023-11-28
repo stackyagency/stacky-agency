@@ -2,20 +2,15 @@
   "collectionName": "components_sections_headers",
   "info": {
     "displayName": "Header",
-    "icon": "code"
+    "icon": "code",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "classname": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "background": {
+    "teams": {
       "allowedTypes": [
         "images",
         "files",
@@ -23,7 +18,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     }
   }
 }

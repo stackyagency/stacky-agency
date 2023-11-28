@@ -119,12 +119,11 @@ export interface SectionsHeader extends Schema.Component {
   info: {
     displayName: 'Header';
     icon: 'code';
+    description: '';
   };
   attributes: {
     classname: Attribute.String;
-    title: Attribute.String;
-    description: Attribute.String;
-    background: Attribute.Media;
+    teams: Attribute.Media;
   };
 }
 

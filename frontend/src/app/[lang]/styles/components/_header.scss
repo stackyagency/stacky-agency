@@ -20,23 +20,318 @@ $media-expressions: (
     "(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)",
 );
 
-.header {
+header {
   position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  gap: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  padding: 100px 60px;
-  gap: 20px;
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-  }
-  p {
-    width: 60%;
-    text-align: center;
+  > div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    background-color: white;
+    flex-direction: row;
+    // CONTAINER TOP
+    &:first-child {
+      position: relative;
+      height: 30%;
+      > div {
+        position: relative;
+        height: 100%;
+        border-radius: 40px;
+        background-color: yellow;
+        overflow: hidden;
+
+        &:nth-child(1) {
+          width: 50%;
+        }
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          padding: 40px;
+          background-color: $ORANGE;
+          align-items: flex-end;
+          justify-content: flex-end;
+          width: 25%;
+
+          svg {
+            &.arrow-top {
+              position: absolute;
+              top: 40px;
+              left: 40px;
+            }
+            &.logo {
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              width: 100%;
+              height: 100%;
+              transform-origin: center;
+              transform: rotate(-165deg);
+              opacity: 0.05;
+              scale: 2;
+            }
+          }
+
+          h6 {
+            color: #fff;
+            text-align: right;
+            font-family: "Josefin Sans";
+            font-size: calc(2000vw / 1018);
+            font-style: normal;
+            font-weight: 300;
+            line-height: calc(2000vw / 1018); /* 102.5% */
+            text-transform: uppercase;
+          }
+        }
+        &:nth-child(3) {
+          width: 25%;
+          background-color: $ORANGE;
+          svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-165deg);
+            scale: 2;
+            path {
+              fill: $BLUE;
+            }
+          }
+        }
+      }
+    }
+    // CONTAINER BOTTOM
+    &:last-child {
+      height: 70%;
+
+      > div {
+        // CONTAINER LEFT
+        &:first-child {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          width: 70%;
+          height: 100%;
+          .b-top {
+            z-index: 8;
+            position: relative;
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            > div {
+              z-index: 5;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              > div {
+                &:first-child {
+                  position: relative;
+                  display: flex;
+                  justify-content: space-between;
+                  width: calc(46280vw / 1018);
+
+                  p {
+                    color: $ORANGE;
+                    font-family: "Josefin Sans";
+                    font-size: calc(2000vw / 1018);
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    text-transform: uppercase;
+                  }
+                  span {
+                    color: $ORANGE;
+                    font-family: "Josefin Sans";
+                    font-size: calc(2000vw / 1018);
+                    font-style: italic;
+                    font-weight: 300;
+                    line-height: normal;
+                    text-transform: uppercase;
+                  }
+                }
+                &:last-child {
+                  width: calc(46280vw / 1018);
+
+                  h1 {
+                    color: $ORANGE;
+                    font-family: "Josefin Sans";
+                    font-size: calc(3000vw / 1018);
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: calc(3000vw / 1018); /* 125% */
+                    text-transform: uppercase;
+                  }
+                }
+              }
+            }
+            svg {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 25vh;
+              scale: 5;
+              z-index: 1;
+              path {
+                fill: rgba(0, 0, 0, 0.05);
+              }
+            }
+          }
+          .b-bottom {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            width: 100%;
+            height: 50%;
+            overflow: hidden;
+            > div {
+              width: 50%;
+              border-radius: 40px;
+              height: 100%;
+              background-color: $BLUE;
+              &:first-child {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                padding: 40px;
+                background-color: $BLUE;
+                align-items: flex-start;
+                justify-content: flex-start;
+                overflow: hidden;
+                width: 50%;
+                h6 {
+                  color: #fff;
+                  text-align: left;
+                  font-family: "Josefin Sans";
+                  font-size: calc(2000vw / 1018);
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: calc(2000vw / 1018); /* 102.5% */
+                  text-transform: uppercase;
+                }
+                svg {
+                  &.arrow-top {
+                    position: absolute;
+                    bottom: 40px;
+                    right: 40px;
+                  }
+                  &.logo {
+                    position: absolute;
+                    top: 0%;
+                    left: 0%;
+                    width: 100%;
+                    height: 100%;
+                    transform-origin: center;
+                    opacity: 0.05;
+                    scale: 4;
+                  }
+                }
+              }
+              &:last-child {
+                position: relative;
+                overflow: hidden;
+                width: 50%;
+                height: 100%;
+                fill: rgba(32, 32, 32, 0.05);
+                background-color: white;
+                > div {
+                  position: relative;
+                  width: 100%;
+                  &:first-of-type {
+                    position: relative;
+                    height: 60%;
+                    display: flex;
+                    flex-direction: row;
+                    > div {
+                      position: relative;
+                      width: 25%;
+                      height: 100%;
+                      border-right: 1px solid rgba(0, 0, 0, 0.1);
+                      padding: 20px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-between;
+                      align-items: flex-end;
+                      > svg {
+                        path,
+                        line {
+                          stroke: #202020;
+                        }
+                      }
+
+                      > div {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-end;
+                        width: 100%;
+                        gap: 5px;
+                        > p {
+                          color: rgba(32, 32, 32, 0.6);
+                          font-family: "Josefin Sans";
+                          font-size: 10px;
+                          font-style: normal;
+                          font-weight: 700;
+                          line-height: 10px; /* 100% */
+                          letter-spacing: 0.09375rem;
+                          text-transform: uppercase;
+                        }
+                        > svg {
+                          path {
+                            fill: #202020;
+                          }
+                        }
+                      }
+
+                      &:last-of-type {
+                        border-right: none;
+                      }
+                    }
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                  }
+                  &:last-of-type {
+                    height: 40%;
+                  }
+                }
+                > svg {
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  transform: rotate(120deg);
+                  scale: 4;
+                  left: -10vw;
+                  path {
+                    fill: rgba(32, 32, 32, 0.05);
+                  }
+                }
+              }
+            }
+          }
+        }
+        // CONTAINER RIGHT
+        &:last-child {
+          height: 100%;
+          width: 30%;
+          > div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            border-radius: 40px;
+          }
+        }
+      }
+    }
   }
 }
